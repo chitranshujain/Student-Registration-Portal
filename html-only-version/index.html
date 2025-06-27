@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 🌐 Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Chitranshu Jain" />
+    <meta
+      name="description"
+      content="Student Registration Form for academic enrollment and profile submission."
+    />
+
+    <!-- 🧷 Favicon & Title -->
+    <link rel="icon" href="image.png" type="image/x-icon" />
+    <title>🎓 Student Registration Portal | Chitranshu Jain</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- 🖥️ Header Section -->
+      <center>
+        <hr />
+        <h1>📄 Student Registration Portal</h1>
+        <p>
+          <em>
+            ✨ Welcome! Please fill out the form below to submit your academic
+            and personal details for enrollment. ✨
+          </em>
+        </p>
+        <hr />
+      </center>
+
+      <!-- 📝 Form Starts -->
+      <form method="post">
+        <!-- 👤 Personal Details Section -->
+        <fieldset>
+          <legend><b>👤 Personal Details !!</b></legend>
+
+          <!-- Full Name -->
+          <fieldset>
+            <label for="Name">🧑 Full Name :</label>
+            <input
+              type="text"
+              id="Name"
+              name="name"
+              required
+              placeholder="e.g. Chitranshu Jain"
+            />
+          </fieldset>
+
+          <!-- Email -->
+          <fieldset>
+            <label for="Email">📧 Email Address :</label>
+            <input
+              type="email"
+              id="Email"
+              name="email"
+              required
+              placeholder="e.g. chitranshu@gmail.com"
+            />
+          </fieldset>
+
+          <!-- Phone -->
+          <fieldset>
+            <label for="phone">📱 Phone Number :</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              required
+              placeholder="e.g. 8955226438"
+            />
+          </fieldset>
+
+          <!-- Date of Birth -->
+          <fieldset>
+            <label for="dob">🎂 Date of Birth :</label>
+            <input type="date" id="dob" name="dob" required />
+          </fieldset>
+
+          <!-- Gender -->
+          <fieldset>
+            <label>⚧️ Gender :</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">♂️ Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">♀️ Female</label>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">⚧️ Other</label>
+          </fieldset>
+
+          <!-- Upload Photo -->
+          <fieldset>
+            <label for="photo">🖼️ Upload Photo :</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </fieldset>
+
+          <!-- Aadhar Upload -->
+          <fieldset>
+            <label for="aadhar">🆔 Aadhar Card :</label>
+            <input
+              type="file"
+              id="aadhar"
+              name="aadhar"
+              accept=".pdf"
+              required
+            />
+          </fieldset>
+
+          <!-- Category -->
+          <fieldset>
+            <label for="category">🏷️ Category :</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select Category</option>
+              <option value="general">🌐 General</option>
+              <option value="obc">🧬 OBC</option>
+              <option value="sc">🎯 SC</option>
+              <option value="st">🏹 ST</option>
+              <option value="ews">💰 EWS</option>
+            </select>
+          </fieldset>
+        </fieldset>
+
+        <!-- 📚 Academic Details Section -->
+        <fieldset>
+          <legend><b>📚 Academic Details !!</b></legend>
+
+          <!-- 🎓 Graduation -->
+          <fieldset>
+            <legend><b>🎓 Graduation / College !!</b></legend>
+
+            <!-- Course -->
+            <fieldset>
+              <label for="course">📘 Select Course :</label>
+              <select id="course" name="course" required>
+                <option value="" disabled selected>Choose Course</option>
+                <optgroup label="🎓 Undergraduate">
+                  <option value="btech">B.Tech</option>
+                  <option value="bca">BCA</option>
+                  <option value="bcom">B.Com</option>
+                  <option value="bba">BBA</option>
+                  <option value="bed">B.Ed</option>
+                </optgroup>
+                <optgroup label="🎓 Postgraduate">
+                  <option value="mtech">M.Tech</option>
+                  <option value="mca">MCA</option>
+                  <option value="mcom">M.Com</option>
+                  <option value="mba">MBA</option>
+                </optgroup>
+              </select>
+            </fieldset>
+
+            <!-- College Name -->
+            <fieldset>
+              <label for="clg">🏫 College Name :</label>
+              <input
+                list="colleges"
+                id="clg"
+                name="college"
+                required
+                placeholder="Enter College Name"
+              />
+              <datalist id="colleges">
+                <option value="Poornima College"></option>
+                <option value="SKIT"></option>
+                <option value="JECRC"></option>
+                <option value="MNIT Jaipur"></option>
+                <option value="Arya College"></option>
+                <option value="BITS Pilani"></option>
+              </datalist>
+            </fieldset>
+
+            <!-- Graduation CGPA -->
+            <fieldset>
+              <label for="cgpaGrad">📊 Graduation CGPA :</label>
+              <input
+                type="number"
+                id="cgpaGrad"
+                name="cgpaGrad"
+                min="0"
+                max="10"
+                step="0.1"
+                placeholder="e.g. 8.2"
+                required
+              />
+            </fieldset>
+
+            <!-- Marksheet Upload -->
+            <fieldset>
+              <label for="graduation">📄 Graduation Marksheet :</label>
+              <input
+                type="file"
+                id="graduation"
+                name="graduation"
+                accept=".pdf"
+                required
+              />
+            </fieldset>
+          </fieldset>
+
+          <!-- 🏫 12th Standard -->
+          <fieldset>
+            <legend><b>🏫 12th Standard !!</b></legend>
+
+            <!-- 12th CGPA -->
+            <fieldset>
+              <label for="cgpa12">📊 12th CGPA :</label>
+              <input
+                type="number"
+                id="cgpa12"
+                name="cgpa12"
+                min="0"
+                max="10"
+                step="0.1"
+                placeholder="e.g. 8.8"
+                required
+              />
+            </fieldset>
+
+            <!-- Board -->
+            <fieldset>
+              <label for="board12">🏢 12th Board :</label>
+              <input
+                list="boards"
+                id="board12"
+                name="board12"
+                required
+                placeholder="e.g. CBSE"
+              />
+            </fieldset>
+
+            <!-- Marksheet Upload -->
+            <fieldset>
+              <label for="marksheet12">📄 12th Marksheet :</label>
+              <input
+                type="file"
+                id="marksheet12"
+                name="marksheet12"
+                accept=".pdf"
+                required
+              />
+            </fieldset>
+          </fieldset>
+
+          <!-- 🏫 10th Standard -->
+          <fieldset>
+            <legend><b>🏫 10th Standard !!</b></legend>
+
+            <!-- 10th CGPA -->
+            <fieldset>
+              <label for="cgpa10">📊 10th CGPA :</label>
+              <input
+                type="number"
+                id="cgpa10"
+                name="cgpa10"
+                min="0"
+                max="10"
+                step="0.1"
+                placeholder="e.g. 9.0"
+                required
+              />
+            </fieldset>
+
+            <!-- Board -->
+            <fieldset>
+              <label for="board10">🏢 10th Board :</label>
+              <input
+                list="boards"
+                id="board10"
+                name="board10"
+                required
+                placeholder="e.g. CBSE"
+              />
+            </fieldset>
+
+            <!-- Marksheet Upload -->
+            <fieldset>
+              <label for="marksheet10">📄 10th Marksheet :</label>
+              <input
+                type="file"
+                id="marksheet10"
+                name="marksheet10"
+                accept=".pdf"
+                required
+              />
+            </fieldset>
+          </fieldset>
+
+          <!-- 📚 Shared Board Options -->
+          <datalist id="boards">
+            <option value="CBSE"></option>
+            <option value="ICSE"></option>
+            <option value="RBSE"></option>
+          </datalist>
+        </fieldset>
+
+        <!-- 💼 Profile Section -->
+        <fieldset>
+          <legend><b>💼 Profile !!</b></legend>
+
+          <!-- Technical Description -->
+          <fieldset>
+            <label for="profileText">🧠 Technical Skills & Experience:</label>
+            <textarea
+              id="profileText"
+              name="profileText"
+              rows="3"
+              cols="50"
+              placeholder="Write something about your skills and experiences..."
+            ></textarea>
+          </fieldset>
+
+          <!-- Resume Upload -->
+          <fieldset>
+            <label for="resume">📎 Resume :</label>
+            <input
+              type="file"
+              id="resume"
+              name="resume"
+              accept=".pdf"
+              required
+            />
+          </fieldset>
+        </fieldset>
+
+        <!-- 📜 Terms Section -->
+        <fieldset>
+          <legend><b>📜 Terms & Conditions !!</b></legend>
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms">
+            <em>
+              ✅ I confirm that the information provided is accurate and may be
+              used for academic & recruitment purposes.<br />
+              📌 I have read and agree to the terms and conditions.
+            </em>
+          </label>
+        </fieldset>
+
+        <!-- ✅ Submit Button -->
+        <center>
+          <button type="submit">
+            <b><em>🚀 Submit !!</em></b>
+          </button>
+        </center>
+      </form>
+    </main>
+  </body>
+</html>
